@@ -1,6 +1,9 @@
-import schedule, random, time
-from users import *
+import random
+import schedule
+import time
+
 from main import check
+from users import *
 
 minute = random.randint(1, 10)
 CHECK_SCHEDULES = [
@@ -8,9 +11,11 @@ CHECK_SCHEDULES = [
     (21, minute)
 ]
 
+
 def check_all():
     for user in users:
         check(user['username'], user['password'])
+
 
 if __name__ == "__main__":
     for i in range(len(CHECK_SCHEDULES)):
